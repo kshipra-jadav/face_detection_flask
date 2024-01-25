@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Common styles for all screen sizes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.gsfcuni.edu.in/upload/slider/php949D_NcK1628833893.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        nav {
+            background-color: #212529;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            /* Added for mobile responsiveness */
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            margin-bottom: 10px;
+            /* Added for mobile responsiveness */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5733;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        h1 {
+            color: #1b2850;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: rgba(27, 40, 80, 1);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 768px) {
+
+            /* Common styles for small screens */
+            nav ul li {
+                margin-right: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            /* Styles for small screens */
+            .camera-section img {
+                width: 100%;
+                /* Use 100% width */
+                max-width: none;
+                /* Remove max-width */
+            }
+        }
+
+        /* Styles for medium to large screens */
+        @media only screen and (min-width: 769px) {
+            nav ul li {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            /* Styles for laptop and tablet views */
+            .camera-section {
+                text-align: center;
+                /* Center-align the container */
+            }
+
+            .camera-section img {
+                width: 70%;
+                /* Adjust width as needed */
+                max-width: 800px;
+                /* Set a maximum width */
+                margin: 0 auto;
+                /* Center the image */
+            }
+        }
+
+        /* Styles for the camera section */
+        .camera-section {
+            background-color: #f5f5f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #cameraFeed {
+            width: 100%;
+            /* Use 100% width of the container */
+            max-width: 800px;
+            /* Set a maximum width for larger screens */
+            border-radius: 10px;
+            align-items: center;
+        }
+    </style>
+    <title>Page 1</title>
+</head>
+
+<body>
+    <nav>
+        <img src="https://www.gsfcuni.edu.in/public/logo/White1.png" alt="Logo">
+        <ul>
+            <li><a href="/">Image</a></li>
+            <li><a href="/camera">Camera</a></li>
+            <li><a href="/report">Report</a></li>
+        </ul>
+    </nav>
+
+    <section class="camera-section">
+        <h1>Access Camera Section</h1>
+        <!-- Add code to turn on and display the camera feed using JavaScript -->
+        <img src="{{ url_for('detect_faces', camera_index=0) }}" alt="Face Detection">
+        <video id="cameraFeed" autoplay></video>
+    </section>
+
+    <footer>
+        Developed by Kshipra and Viraj
+    </footer>
+    <script src="camera.js"></script>
+</body>
+
+</html>

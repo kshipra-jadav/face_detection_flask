@@ -1,0 +1,104 @@
+/* common.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.gsfcuni.edu.in/upload/slider/php949D_NcK1628833893.jpeg'); /* Replace 'your-image.jpg' with the path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    }
+
+
+nav {
+    background-color: #212529;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav img {
+    max-width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5733;
+}
+
+section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h1 {
+    color: #1b2850;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgba(27, 40, 80, 1);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20%;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.084);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    border: 0px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Add this CSS to your website's CSS file */
+
+.carousel-caption h3 {
+    font-size: 100px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ span {
+    font-size: 70px;
+    color: #26386e; /* Desired text color */
+    font-weight: bold;
+}
